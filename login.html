@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Login</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+
+		<div id="formContainer">
+			<form id="login" method="post" action="login_pros.php">
+				<a href="#" id="flipToRecover" class="flipLink">Forgot?</a>
+				<input type="text" name="username" id="loginUsername" value="Username" />
+				<input type="password" name="password" id="loginPass" value="pass" />
+				<input type="submit" name="submit" value="Login" />
+			</form>
+			<form id="recover" method="post" action="forgot.php">
+				<a href="#" id="flipToLogin" class="flipLink">Forgot?</a>
+				<input type="text" name="recoverEmail" id="recoverEmail" value="Email" />
+				<input type="submit" name="submit" value="Recover" />
+			</form>
+		</div>
+
+        <div >
+        <br/><center>
+        <h2>Doesn't have username and password for login? <br/> Please Register by clicked on the icon below </h2>
+       <a href="register.html" target="_self"> <img src="assets/images/register-me-now.png"/></a></center>
+        </div>
+        <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="assets/js/scriptLogin.js"></script>
+
+    </body>
+</html>
+

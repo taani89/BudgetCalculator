@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>REGISTER USER</title>
+<!-- CSS -->
+<style type="text/css">
+			form {
+    margin:0
+}
+form label {
+    display: block;
+    margin-bottom:.2em;
+    font-family:"Inconsolata", sans-serif;
+    font-size:13px;
+    line-height:13px;
+    font-size:1.3rem;
+    line-height:1.3rem;
+    color:#000;
+}
+form label.error {
+    margin-top:-1em;
+    margin-bottom:1em;
+    font-size:12px;
+    line-height:12px;
+    font-size:1.2rem;
+    line-height:1.2rem;
+    color:#c0392b
+}
+form input[type="text"], form input[type="password"], form input[type="date"], form input[type="datetime-local"], form input[type="month"],form input[type="week"], form input[type="radio"], form input[type="email"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="time"], form input[type="url"], form textarea {
+    margin-bottom:1.25em;
+    font-family:"Inconsolata", sans-serif;
+    font-size:14px;
+    line-height:14px;
+    font-size:1.4rem;
+    line-height:1.4rem;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    background:#e6e6e6;
+    border:1px solid #191919;
+    -moz-border-radius:0.2em 0.2em 0.2em 0.2em;
+    -webkit-border-radius:0.2em 0.2em 0.2em 0.2em;
+    border-radius:0.2em 0.2em 0.2em 0.2em
+}
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="date"]:focus, form input[type="datetime"]:focus, form input[type="datetime-local"]:focus, form input[type="month"]:focus, form input[type="week"]:focus,form input[type="radio"]:focus, form input[type="email"]:focus, form input[type="number"]:focus, form input[type="search"]:focus, form input[type="tel"]:focus, form input[type="time"]:focus, form input[type="url"]:focus, form textarea:focus {
+    border-color:#191919;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none
+}
+form input[type="text"][disabled], form input[type="password"][disabled], form input[type="date"][disabled], form input[type="datetime"][disabled], form input[type="datetime-local"][disabled], form input[type="month"][disabled], form input[type="week"][disabled],form input[type="radio"][disabled], form input[type="email"][disabled], form input[type="number"][disabled], form input[type="search"][disabled], form input[type="tel"][disabled], form input[type="time"][disabled], form input[type="url"][disabled], form textarea[disabled] {
+    background:#fff
+}
+form input[type="text"].error, form input[type="password"].error, form input[type="date"].error, form input[type="datetime"].error, form input[type="datetime-local"].error, form input[type="month"].error, form input[type="week"].error,form input[type="radio"].error, form input[type="email"].error, form input[type="number"].error, form input[type="search"].error, form input[type="tel"].error, form input[type="time"].error, form input[type="url"].error, form textarea.error {
+    background:#e6e6e6;
+    border-color:#c0392b
+}
+fieldset {
+    border:0px;
+    margin:0;
+    padding:0
+}
+.required {
+    color:#e9266d
+}
+#success, #error {
+    display:none
+}
+#success span, #error span {
+    display:block;
+    position:absolute;
+    top:0;
+    width:100%
+}
+#success span p, #error span p {
+    margin-top:6em
+}
+#success span p {
+    color:#9bd32d
+}
+#error span p {
+    color:#c0392b
+}		</style>
+
+</head>
+
+<body>
+<h1>REGISTRATION FORM</h1>
+<p>Please Fill in all details in the form</p>
+
+<form id="register" name="register" method="post" action="process.php" novalidate="novalidate">
+  
+  <p>PERSONAL INFORMATION</p>
+  <p>
+    <label for="fname" id="fname">First Name:<span class="required">*</span></label> 
+      <input name="fname" type="text" id="fname" size="50" maxlength="100" />
+     
+    
+    <label for="lname" id="lname">Last Name:<span class="required">*</span></label>
+      <input name="lname" type="text" id="lname" size="50" maxlength="100" />
+    
+  </p>
+  <p>
+    <label for="gender" id="gender">Gender :<span class="required">*</span>  </label>
+    <select name="gender" id="gender">
+      <option>Female</option>
+      <option>Male</option>
+      </select>
+  </p>
+  <p>
+    <label for="age" id="age">Age :<span class="required">*</span></label>
+      <input name="age" type="number" id="age" size="5" /> 
+    
+      <label for="dob" id="dob">
+      Date of Birth :<span class="required">*</span></label>
+     <input type="date" name="dob" id="dob" />
+    
+  </p>
+  <p>
+    <label for="race" id="race">Race:    </label>
+      <select name="race" id="race">
+        <option selected="selected">Melayu</option>
+        <option>Cina</option>
+        <option>India</option>
+        <option>Iban</option>
+        <option>Bidayuh</option>
+        <option>Melanau</option>
+        <option>Kayan</option>
+        <option>Kenyah</option>
+        <option>Lun Bawang</option>
+        <option>Penan</option>
+        <option>Kelabit</option>
+        <option>Bisaya</option>
+        <option>Kedayan</option>
+        <option>Berawan</option>
+        <option>Lahanan</option>
+        <option>Sekapan</option>
+        <option>Kejaman</option>
+        <option>Punan</option>
+        <option>Baketan</option>
+        <option>Ukit</option>
+        <option>Sihan</option>
+        <option>Tagal</option>
+        <option>Tabun</option>
+        <option>Saban</option>
+        <option>Lisum</option>
+        <option>Longkiput</option>
+        <option>KadazanDusun</option>
+        <option>Murut</option>
+        <option>Bajau</option>
+        <option>Suluk Sabah</option>
+        <option>Melayu Brunei</option>
+        <option>Orang sungai</option>
+        <option>Bonggi</option>
+        <option>Kwijau</option>
+        <option>Paitan</option>
+        <option>Lundayeh</option>
+        <option>Ubian</option>
+        <option>Binadan</option>
+        <option>Kokos</option>
+        <option>Rumanau</option>
+        <option>Lotud</option>
+        <option>Minokok</option>
+        <option>Tidung</option>
+        <option>Tindal</option>
+        <option>Rungus</option>
+        <option>Tatana</option>
+        <option>Tagaas</option>
+        <option>Kimarang</option>
+        <option>Iranun</option>
+        <option>Ida'an</option>
+        <option>Momogun Rungus</option>
+        <option>Baba dan Nyonya</option>
+      </select>
+ 
+  
+  <label for="religion" id="religion">Religion :  </label>
+    <select name="religion" id="religion">
+      <option selected="selected">Islam</option>
+      <option>Christian</option>
+      <option>Hindu</option>
+      <option>Buddha</option>
+      <option>Daoism</option>
+      <option>Confucianism</option>
+      <option>Sikhism</option>
+      <option>indigenous</option>
+    </select>
+
+  </p>
+  <p>
+    <label for="address" id="address">Address :<span class="required">*</span>    </label>
+      <input name="address" type="text" id="address" size="100" maxlength="200" />
+ 
+  </p>
+  <p>
+     
+    <label for="zip" id="zip">Postal Code :<span class="required">*</span></label>
+        <input name="zip" type="number" id="zip" size="6" maxlength="10" />
+      
+ 
+  <label for="town" id="town"> Town : <span class="required">*</span> </label>
+    <input name="town" type="text" id="town" size="15" maxlength="50" />
+ 
+  </p>
+  <p> <label for="city" id="city">City : <span class="required">*</span>  </label>
+    <input name="city" type="text" id="city" size="15" maxlength="50" />
+  
+    <label for="state" id="state">
+  State :<span class="required">*</span> </label>
+  <input name="state" type="text" id="state" size="15" maxlength="50" />
+  
+   <label for="country" id="country">
+  Country :<span class="required">*</span> </label>
+  <input name="country" type="text" id="country" size="15" maxlength="50" />
+
+  </p>
+  <p>
+    <label for="mobile" id="mobile">Mobile Phone :<span class="required">*</span> </label>
+      <input name="mobile" type="text" id="mobile" size="15" maxlength="25" />
+
+    <label for="home" id="home">
+  Home No. : </label>
+  <input name="home" type="text" id="home" size="15" maxlength="25" />
+  
+  </p>
+  <p>&nbsp;</p>
+  <p>ACADEMIC INFORMATION</p>
+  <p>
+  <label for="universityName" id="universityName">University Name :<span class="required">*</span> </label>
+    <input name="universityName" type="text" id="universityName" size="100" maxlength="200" />
+</p>
+  <p>
+    <label for="matricNo" id="matricNo">Matric Card No. :<span class="required">*</span>   </label>
+      <input name="matricNo" type="text" id="matricNo" size="15" maxlength="20" />
+
+ 
+  <label for="programCode" id="programCode"> Program Code:<span class="required">*</span>     </label>
+    <input name="programCode" type="text" id="programCode" size="6" maxlength="10" />
+  
+  </p>
+  <p> 
+    <label for="programName" id="programName">Program Name :<span class="required">*</span></label>
+      <input name="programName" type="text" id="programName" size="100" maxlength="200" />
+    
+  </p>
+  <p><label for="faculty" id="faculty">Faculty : </label>
+    <input name="faculty" type="text" id="faculty" size="100" maxlength="200" />
+  </p>
+  <p><label for="cSem" id="cSem">Current Semester :<span class="required">*</span> </label>
+    <input name="cSem" type="number" id="cSem" size="5" />
+  <label for="totalSem" id="totalSem">Total Semester Enrolled :<span class="required">*</span></label> 
+    <input name="totalSem" type="number" id="totalSem" size="5" />
+    <label for="totalYear" id="totalYear">Total Years Enrolled :<span class="required">*</span></label> 
+    <input name="totalYear" type="number" id="totalYear" size="5" />
+  </p>
+  <p>
+    <label for="financial" id="financial">Financial Resources :<span class="required">*</span></label>
+      <input name="financial" type="text" id="financial" size="25" maxlength="50" />
+   
+
+<label for="othersF" id="othersF">Others Resources:<span class="required">*</span> </label>
+  <input name="othersF" type="text" id="othersF" size="25" maxlength="50" />
+</p>
+  <p>
+    <label for="acc" id="acc" >Account Bank No :</label
+      ><input name="acc" type="text" id="acc" size="20" />
+    
+  </p>
+  <p>
+    <label for="bankName id="bankName>Bank Name :</label>
+      <select name="bankName" id="bankName">
+        <option>Affin Bank Berhad</option>
+        <option>Alliance Bank Berhad</option>
+        <option>AmBank Berhad</option>
+        <option>CIMB Bank Berhad</option>
+        <option>EON Bank Berhad</option>
+        <option>Hong Leong Bank Berhad</option>
+        <option>Malayan Banking Berhad (Maybank)</option>
+        <option>Public Bank Berhad</option>
+        <option>RHB Bank Berhad</option>
+        <option>Citibank</option>
+        <option>HSBC Bank Malaysia</option>
+        <option selected="selected">Bank Islam Malaysia Berhad</option>
+        <option>Bank Kerjasama Rakyat Malaysia Berhad (Bank Rakyat)</option>
+        <option>Agro Bank Malaysia</option>
+        <option>Bank Simpanan Nasional Berhad</option>
+      </select>
+    
+  </p>
+  <p>CURRENT ADDRESS WHERE YOU STUDY</p>
+  <p>
+    <label for="address" id="address">Address 2:<span class="required">*</span></label> 
+      <input name="address2" type="text" id="address2" size="100" maxlength="200" />
+    
+  </p>
+  <p>
+     
+      <label for="zip" id="zip">Postal Code :<span class="required">*</span></label>
+        <input name="zip2" type="number" id="zip2" size="6" maxlength="10" />
+      
+ 
+  <label for="town" id="town"> Town :<span class="required">*</span></label> 
+    <input name="town2" type="text" id="town2" size="15" maxlength="50" />
+  
+  </p>
+  <p> <label for="city" id="city">City :<span class="required">*</span> </label>
+    <input name="city2" type="text" id="city2" size="15" maxlength="50" />
+  
+    <label for="state" id="state">
+  State :<span class="required">*</span>   </label>
+  <input name="state2" type="text" id="state2" size="15" maxlength="50" />
+  
+   <label for="country" id="country">
+  Country :<span class="required">*</span> </label>
+  <input name="country2" type="text" id="country2" size="15" maxlength="50" />
+  
+  </p>
+  <p>&nbsp;</p>
+  <p>LOGIN INFORMATION</p>
+  <p>
+  <label for="username" id="username">Username :<span class="required">*</span></label>
+    <input name="username" type="text" id="username" size="25" maxlength="50" />
+ 
+ 
+  <label for="email" id="email"> Email :<span class="required">*</span> </label>
+    <input name="email" type="email" id="email" size="25" maxlength="50" />
+  
+  </p>
+  <p> 
+    <label for="password" id="password">Password :<span class="required">*</span></label>
+      <input name="password" type="password" id="password" size="15" maxlength="50" />
+  
+  </p>
+  <p>
+  <label for="Answer" id="answer">Name the small house pet that says “<i>meow</i>“<span class="required">*</span>
+        </label>
+        <input type="text" name="answer" value="" required></br>
+    </br><input type="submit" name="submit" id="submit" value="REGISTER" />
+  </p>
+</form>
+<div id="success">
+    <span class="green textcenter">
+        <p>Your message was sent successfully! I will be in touch as soon as I can.</p>
+    </span>
+</div>
+
+<div id="error">
+    <span>
+        <p>Something went wrong, try refreshing and submitting the form again.</p>
+    </span>
+</div>
+
+
+<!-- Vendor JS -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+jQuery.validator.addMethod('answercheck', function (value, element) {
+        return this.optional(element) || /^\bcat\b$/.test(value);
+    }, "type the correct answer -_-");
+
+// validate contact form
+$(function() {
+    $('#register').validate({
+        rules: {
+            fname: {
+                required: true,
+                minlength: 3
+            },
+			lname: {
+                required: true,
+                minlength: 4
+            },
+			gender: {
+                required: true,
+            },
+			age: {
+                required: true,
+                minlength: 2
+            },
+			dob: {
+                required: true,
+				date: true
+            },
+			address:{
+                required: true,
+                minlength: 5
+            },
+			address2:{
+                required: true,
+                minlength: 5
+            },
+			zip: {
+                required: true,
+                minlength: 5
+            },
+			zip2: {
+                required: true,
+                minlength: 5
+            },
+			town: {
+                required: true,
+                minlength: 2
+            },
+			town2: {
+                required: true,
+                minlength: 2
+            },
+			city: {
+                required: true,
+                minlength: 2
+            },
+			city2: {
+                required: true,
+                minlength: 2
+            },
+			state: {
+                required: true,
+                minlength: 2
+            },
+			state2: {
+                required: true,
+                minlength: 2
+            },
+			country: {
+                required: true,
+                minlength: 2
+            },
+			country2: {
+                required: true,
+                minlength: 2
+            },
+			mobile: {
+                required: true,
+                minlength: 5
+            },
+			universityName: {
+                required: true,
+                minlength: 2
+            },
+			matricNo: {
+                required: true,
+                minlength: 5
+            },
+			programCode: {
+                required: true,
+                minlength: 3
+            },
+			programName: {
+                required: true,
+                minlength: 10
+            },
+			faculty: {
+                required: true,
+                minlength: 2
+            },
+			cSem: {
+                required: true,
+                minlength: 1
+            },
+			totalSem: {
+                required: true,
+                minlength: 1
+            },
+			totalYear: {
+                required: true,
+                minlength: 1
+            },
+			financial: {
+                required: true,
+                minlength: 2
+            },
+			othersF: {
+                required: true,
+                minlength: 2
+            },
+			 username: {
+                required: true,
+                minlength: 5
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                password: true,
+				minlength: 6
+            },
+            answer: {
+                required: true,
+                answercheck: true
+            }
+        },
+        messages: {
+            fname: {
+                required: "Please enter your first name",
+                minlength: "Your first name must consist of at least 3 characters"
+            },
+			lname: {
+                required: "Please enter your last name",
+                minlength: "Your last name must consist of at least 4 characters"
+            },
+			gender: {
+                required: "Please choose your Gender"
+            },
+			age: {
+                required: "Please state your valid age in the field",
+                minlength: "Your age must be around 2 digits of number,aren't you?"
+            },
+			dob: {
+                required: "Please pick your valid date of birth",
+            },
+			address:{
+                required: "Please enter your HOMETOWN valid email address",
+                minlength: "Your address must consist of at least 5 characters. That is the MINIMUM"
+            },
+			address2:{
+                required: "Please enter your CURRENT hostel/rental valid email address",
+                minlength: "Your address must consist of at least 5 characters. That is the MINIMUM"
+            },
+			zip: {
+                required: "Please enter your HOMETOWN postal code",
+                minlength: "Your postal code must consist of at least 5 characters. That is the MINIMUM"
+            },
+			zip2: {
+                required: "Please enter your CURRENT hostel/rental postal code",
+                minlength: "Your postal code must consist of at least 5 characters. That is the MINIMUM"
+            },
+			town: {
+                required: "Please enter a town in which your  HOMETOWN is placed.",
+                minlength: "Your town must consist of at least 2 characters. You can use town code"
+            },
+			town2: {
+                required: "Please enter a town in which your  CURRENT hostel/rental is placed.",
+                minlength: "Your town must consist of at least 2 characters. You can use town code"
+            },
+			city: {
+                required: "Please enter a city in which your HOMETOWN is placed.",
+                minlength: "Your city must consist of at least 2 characters. You can use city code"
+            },
+			city2: {
+                required: "Please enter a city in which your  CURRENT hostel/rental is placed.",
+                minlength: "Your city must consist of at least 2 characters. You can use city code"
+            },
+			state: {
+                required: "Please enter a state in which your HOMETOWN is placed.",
+                minlength: "Your state must consist of at least 2 characters. You can use state code"
+            },
+			state2: {
+                required: "Please enter a state in which your  CURRENT hostel/rental is placed.",
+                minlength: "Your state must consist of at least 2 characters. You can use state code"
+            },
+			country: {
+                required: "Please enter a country in which your HOMETOWN is placed.",
+                minlength: "Your country must consist of at least 2 characters. You can use country code"
+            },
+			country2: {
+                required: "Please enter a country in which your  CURRENT hostel/rental is placed.",
+                minlength: "Your country must consist of at least 2 characters. You can use country code"
+            },
+			mobile: {
+                required: "Please enter your valid mobile phone number",
+                minlength: "Your number must consist of at least minimum 5 characters"
+            },
+			universityName: {
+                required: "Please enter your university name",
+                minlength: "You can use university short name/code limit to 2 characters."
+            },
+			matricNo: {
+                required: "Please enter your matric card number",
+                minlength: "At least consist of 5 characters"
+            },
+			programCode: {
+                required: "Please enter a valid program cde",
+                minlength: "Minimum code must consist of at least 3 characters"
+            },
+			programName: {
+                required: "Please enter a valid program name",
+                minlength: "Program name must consist of at least 10 characters minimum!"
+            },
+			faculty: {
+                required: "Please enter a valid faculty name",
+                minlength: "You can use faculty code instead of name,must consist of at least 2 characters minimum!"
+            },
+			cSem: {
+                required: "Please enter your current semester",
+                minlength: "Minimum characters is 1"
+            },
+			totalSem: {
+                required: "Please enter a total of semester for the whole program.",
+                minlength: "Minimum characters is 1"
+            },
+			totalYear: {
+                required: "Please enter total of years for the whole program",
+                minlength: "Minimum characters is 1"
+            },
+			financial: {
+                required: "Please state your financial resources such as PTPTN,MARA,etc",
+                minlength: "Consists of at least 2 characters minimum,you can used code"
+            },
+			othersF: {
+                required: "Other than financial support from PTPTN,MARA or etc, please state another types of resources you has",
+                minlength: "Consists of at least 2 characters minimum,you can used code"
+            },
+			 username: {
+                required: "This is required to identify yourself during login",
+                minlength: "Your username must consists of at least 5 characters minimum."
+            },
+            password: {
+                required: "You must enter a pssword for login details.",
+				minlength: "Your password must contains at least 6 characters"
+            },
+            email: {
+                required: "no email, no message, no registration"
+				
+            },
+            answer: {
+                required: "sorry, wrong answer!"
+            }
+		},
+		submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"process.php",
+                success: function() {
+                    $('#register :input').attr('disabled', 'disabled');
+                    $('#register').fadeTo( "slow", 0.15, function() {
+                        $(this).find(':input').attr('disabled', 'disabled');
+                        $(this).find('label').css('cursor','default');
+                        $('#success').fadeIn();
+                    });
+                },
+                error: function() {
+                    $('#register').fadeTo( "slow", 0.15, function() {
+                        $('#error').fadeIn();
+                    });
+                }
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>
